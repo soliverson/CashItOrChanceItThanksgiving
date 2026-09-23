@@ -10,12 +10,12 @@
   >
 
   <title>
-    Cash It or Chance It: Halloween Edition | MadeToPlayGames
+    Cash It or Chance It: Thanksgiving Edition | MadeToPlayGames
   </title>
 
   <meta
     name="description"
-    content="Cash It or Chance It Halloween Edition - an interactive party game by MadeToPlayGames."
+    content="Cash It or Chance It Thanksgiving Edition - an interactive Thanksgiving party game by MadeToPlayGames."
   >
 
   <link
@@ -31,7 +31,7 @@
 </head>
 
 
-<body class="halloween-edition">
+<body class="thanksgiving-edition">
 
 
   <!-- =====================================================
@@ -80,7 +80,7 @@
 
 
   <!-- =====================================================
-       TOP HALLOWEEN SCENERY
+       TOP THANKSGIVING SCENERY
        ===================================================== -->
 
   <div
@@ -98,7 +98,7 @@
     <div id="headerContent">
 
 
-      <!-- Decorative corner webs -->
+      <!-- Decorative autumn corners -->
 
       <div
         class="web-corner web-left"
@@ -135,13 +135,13 @@
         <div class="halloween-subtitle">
 
           <span aria-hidden="true">
-            🎃
+            🍁
           </span>
 
-          Halloween Edition
+          Thanksgiving Edition
 
           <span aria-hidden="true">
-            🎃
+            🍁
           </span>
 
         </div>
@@ -199,7 +199,7 @@
           class="message-pumpkin"
           aria-hidden="true"
         >
-          🎃
+          🍁
         </span>
 
 
@@ -212,7 +212,7 @@
           class="message-pumpkin"
           aria-hidden="true"
         >
-          🎃
+          🍁
         </span>
 
       </div>
@@ -227,12 +227,14 @@
     <aside id="prizesSection">
 
       <h2 class="tricks-title">
-        Tricks &amp; Treats
+        Turkey Treats
       </h2>
 
 
       <ul id="prizeBoard"></ul>
 
+
+      <!-- Autumn divider -->
 
       <div
         class="spooky-divider"
@@ -240,13 +242,13 @@
       >
 
         <span>
-          🕷️
+          🍂
         </span>
 
         <span></span>
 
         <span>
-          🕸️
+          🍁
         </span>
 
       </div>
@@ -265,7 +267,7 @@
 
 
   <!-- =====================================================
-       BOTTOM HALLOWEEN SCENERY
+       BOTTOM THANKSGIVING SCENERY
        ===================================================== -->
 
   <div
@@ -285,12 +287,26 @@
        AUDIO
        ===================================================== -->
 
+  <!--
+       You can leave your current Halloween music here
+       temporarily.
+
+       When you have Thanksgiving music, replace:
+       audio/halloween-background.mp3
+
+       with:
+       audio/thanksgiving-background.mp3
+  -->
+
   <audio
     id="backgroundMusic"
-    src="audio/halloween-background.mp3"
+    src="audio/thanksgiving-background.mp3"
     preload="auto"
     loop
   ></audio>
+
+
+  <!-- Click sound -->
 
   <audio
     id="clickSound"
@@ -298,11 +314,17 @@
     preload="auto"
   ></audio>
 
+
+  <!-- Offer sound -->
+
   <audio
     id="offerSound"
     src="audio/offer.mp3"
     preload="auto"
   ></audio>
+
+
+  <!-- Decline / Chance It sound -->
 
   <audio
     id="declineSound"
@@ -310,17 +332,26 @@
     preload="auto"
   ></audio>
 
+
+  <!-- Celebration -->
+
   <audio
     id="applause"
     src="audio/applause.mp3"
     preload="auto"
   ></audio>
 
+
+  <!-- Suspense -->
+
   <audio
     id="suspenseMusic"
     src="audio/jaws.mp3"
     preload="auto"
   ></audio>
+
+
+  <!-- Final decision -->
 
   <audio
     id="finalSwapMusic"
@@ -330,7 +361,7 @@
 
 
   <!-- =====================================================
-       OFFER MODAL
+       OFFER / GAME MODAL
        ===================================================== -->
 
   <div
@@ -351,13 +382,60 @@
        JAVASCRIPT
        ===================================================== -->
 
-  <script defer src="scripts/data.js"></script>
-  <script defer src="scripts/render.js"></script>
-  <script defer src="scripts/sounds.js"></script>
-  <script defer src="scripts/game.js"></script>
-  <script defer src="scripts/effects.js"></script>
-  <script defer src="scripts/screen.js"></script>
-  <script defer src="scripts/intro.js"></script>
+  <!-- Prize amounts / photo data -->
+
+  <script
+    defer
+    src="scripts/data.js"
+  ></script>
+
+
+  <!-- Render photo picks and prize board -->
+
+  <script
+    defer
+    src="scripts/render.js"
+  ></script>
+
+
+  <!-- Game sounds -->
+
+  <script
+    defer
+    src="scripts/sounds.js"
+  ></script>
+
+
+  <!-- Main game logic -->
+
+  <script
+    defer
+    src="scripts/game.js"
+  ></script>
+
+
+  <!-- Celebration / visual effects -->
+
+  <script
+    defer
+    src="scripts/effects.js"
+  ></script>
+
+
+  <!-- Full-screen / TV mode -->
+
+  <script
+    defer
+    src="scripts/screen.js"
+  ></script>
+
+
+  <!-- Intro video -->
+
+  <script
+    defer
+    src="scripts/intro.js"
+  ></script>
 
 
   <!-- =====================================================
@@ -371,13 +449,34 @@
       const loading =
         document.getElementById("loadingOverlay");
 
+
       if (loading) {
-        loading.style.display = "none";
+
+        loading.style.display =
+          "none";
+
       }
+
+
+      /*
+        Build the photo grid.
+      */
 
       renderBriefcases();
 
+
+      /*
+        Build the prize board
+        and previous-offers panel.
+      */
+
       updateSidePanels();
+
+
+      /*
+        Display the opening
+        game instructions.
+      */
 
       showRoundModal(1);
 

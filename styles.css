@@ -3478,3 +3478,221 @@ body.reveal-active::after {
   }
 
 }
+/* =========================================================
+   THANKSGIVING EDITION OVERRIDES
+   Keeps the existing layout/fullscreen/reveal sizing intact.
+   ========================================================= */
+
+body.thanksgiving-edition {
+  --orange: #f47a00;
+  --orange-bright: #ffad19;
+  --green: #ffc247;
+  --purple: #c95d18;
+  --dark-purple: #351407;
+  --black: #120702;
+  --cream: #fff0cf;
+  color: #fff4dc;
+  background: linear-gradient(180deg, #160802 0%, #2c0d03 45%, #120501 100%);
+}
+
+body.thanksgiving-edition .halloween-scenery {
+  background-image: url("images/thanksgiving-top.webp");
+  background-size: 100% auto;
+  background-position: center top;
+  background-repeat: no-repeat;
+  border-bottom-color: #ff8a00;
+  box-shadow: 0 4px 20px rgba(255, 111, 0, 0.65);
+}
+
+body.thanksgiving-edition #headerContent {
+  background: linear-gradient(180deg, rgba(65,22,4,.97), rgba(24,7,2,.99));
+  border-color: #ff8a00;
+  box-shadow: 0 0 10px #ff8a00, 0 0 28px rgba(255,111,0,.45), inset 0 0 24px rgba(107,38,5,.45);
+}
+body.thanksgiving-edition #headerContent::after {
+  background: radial-gradient(ellipse at center, rgba(255,127,0,.13), transparent 67%);
+}
+body.thanksgiving-edition .cash-title {
+  color: #ff9d00;
+  text-shadow: 4px 5px #702000, 0 0 15px rgba(255,153,0,.65);
+}
+body.thanksgiving-edition .or-title {
+  color: #fff2d1;
+  text-shadow: 3px 4px #542006;
+}
+body.thanksgiving-edition .chance-title {
+  color: #ff6a19;
+  text-shadow: 4px 5px #6f1700, 0 0 15px rgba(255,80,0,.55);
+}
+body.thanksgiving-edition .halloween-subtitle {
+  color: #ffd48a;
+  text-shadow: 2px 3px #6c2608, 0 0 7px rgba(255,153,0,.4);
+}
+
+body.thanksgiving-edition #headerButtons button,
+body.thanksgiving-edition #introButtons button {
+  background: linear-gradient(#ffb52b, #e66a00);
+  color: #241004;
+  border-color: #ffe0a3;
+  box-shadow: 0 0 8px #ff8a00, inset 0 0 7px rgba(255,255,255,.35);
+}
+body.thanksgiving-edition #musicToggleBtn.music-off {
+  background: linear-gradient(#54230b, #271005);
+  color: #ffc56b;
+  border-color: #a84d18;
+}
+
+body.thanksgiving-edition #briefcasesSection {
+  background-image:
+    linear-gradient(180deg, rgba(25,7,1,.38) 0%, rgba(30,8,1,.52) 48%, rgba(15,4,1,.68) 100%),
+    url("images/thanksgiving-top.webp");
+  background-size: cover, cover;
+  background-position: center, center 58%;
+  background-repeat: no-repeat, no-repeat;
+  border-color: #ff8200;
+  box-shadow: 0 0 12px rgba(255,119,0,.85), inset 0 0 35px rgba(30,7,0,.72);
+}
+body.thanksgiving-edition #briefcasesSection::after {
+  background: radial-gradient(ellipse at center, transparent 38%, rgba(34,8,0,.48) 100%);
+}
+
+body.thanksgiving-edition .briefcase {
+  background: linear-gradient(#321305, #100501);
+  border-color: #ff8a00;
+  box-shadow: 0 0 8px #ff8a00, 0 0 18px rgba(255,111,0,.72), 0 7px 12px rgba(0,0,0,.55);
+}
+body.thanksgiving-edition .briefcase:hover {
+  box-shadow: 0 0 12px #ffad19, 0 0 28px rgba(255,126,0,.95);
+}
+body.thanksgiving-edition .briefcase-number {
+  background: linear-gradient(#ffc144, #f28500);
+  color: #1d0900;
+  border-color: #ffe6a9;
+}
+body.thanksgiving-edition .briefcase.personal {
+  border-color: #ffd34e;
+  box-shadow: 0 0 10px #ffd34e, 0 0 25px rgba(255,190,36,.95);
+}
+body.thanksgiving-edition .briefcase.personal .briefcase-number {
+  background: #ffd34e;
+  border-color: #fff0ad;
+}
+body.thanksgiving-edition .briefcase.opened {
+  box-shadow: 0 0 4px rgba(255,128,0,.35);
+}
+
+body.thanksgiving-edition #briefcasesInfo {
+  background:
+    linear-gradient(0deg, rgba(36,13,1,.30) 0, transparent 2px, transparent 8px, rgba(50,17,2,.24) 9px, transparent 10px),
+    linear-gradient(90deg, #4a1d06 0%, #814115 12%, #a35b25 28%, #6a310d 47%, #95501d 66%, #5b2608 82%, #421804 100%);
+  background-size: 100% 11px, 100% 100%;
+  border-color: #321305;
+  box-shadow: 0 0 0 2px #c47736, inset 0 2px 3px rgba(255,210,145,.25), inset 0 -5px 8px rgba(0,0,0,.4), 0 6px 16px rgba(0,0,0,.7);
+}
+body.thanksgiving-edition #gameMessage {
+  color: #ffe1a1;
+  text-shadow: 3px 3px #3d1402, 0 0 5px rgba(255,169,48,.55);
+}
+
+body.thanksgiving-edition #prizesSection {
+  background: linear-gradient(180deg, rgba(67,23,5,.99), rgba(22,6,2,.99));
+  border-color: #ff8a00;
+  box-shadow: 0 0 10px #ff8a00, 0 0 28px rgba(255,111,0,.52), inset 0 0 25px rgba(83,26,3,.55);
+}
+body.thanksgiving-edition .tricks-title {
+  color: #ffb126;
+  text-shadow: 3px 4px #6d2200, 0 0 11px rgba(255,145,0,.65);
+}
+body.thanksgiving-edition .prize-column li {
+  background: linear-gradient(#2c1105, #120601);
+  border-color: #8f3d0b;
+  color: #ffc34a;
+}
+body.thanksgiving-edition .prize-pumpkin { font-size: 0; }
+body.thanksgiving-edition .prize-pumpkin::after { content: "🍁"; font-size: 16px; }
+body.thanksgiving-edition .spooky-divider { color: #d86a16; }
+body.thanksgiving-edition .spooky-divider span:nth-child(2) {
+  background: linear-gradient(90deg, transparent, #e87818, #ffb52b, #e87818, transparent);
+  box-shadow: 0 0 8px rgba(255,123,0,.65);
+}
+body.thanksgiving-edition .offers-title {
+  color: #ffb12b;
+  text-shadow: 2px 3px #672100, 0 0 7px rgba(255,139,0,.5);
+}
+body.thanksgiving-edition #offersHistory {
+  background: rgba(48,17,5,.84);
+  border-color: #93400f;
+}
+body.thanksgiving-edition #offersHistory li { border-bottom-color: rgba(255,133,26,.24); }
+body.thanksgiving-edition #offersHistory strong { color: #ffc54c; }
+
+body.thanksgiving-edition .bottom-scene {
+  background-image: url("images/thanksgiving-bottom.webp");
+  background-size: cover;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  border-top: 3px solid #e77716;
+  box-shadow: 0 -4px 18px rgba(255,115,0,.4);
+}
+
+body.thanksgiving-edition .modal-content {
+  background: linear-gradient(#4a1804, #170601);
+  border-color: #ff8a00;
+  box-shadow: 0 0 18px #ff8a00, 0 0 45px rgba(155,48,5,.72);
+}
+body.thanksgiving-edition .modal-content .deal {
+  background: linear-gradient(#ffd05a, #e89b00);
+  border-color: #fff0ae;
+  box-shadow: 0 0 18px #ffbd2e;
+}
+body.thanksgiving-edition .modal-content .decline {
+  background: linear-gradient(#ff9d21, #d9500a);
+  border-color: #ffd39a;
+  box-shadow: 0 0 18px #ff7417;
+}
+body.thanksgiving-edition #loadingOverlay { background: #180701; color: #ffb52b; }
+body.thanksgiving-edition .firework { background: #ffb52b; box-shadow: 0 0 12px #ff7b17; }
+
+body.thanksgiving-edition > .center-open,
+body.thanksgiving-edition.tv-fullscreen > .center-open {
+  background: linear-gradient(180deg, #461704 0%, #160601 100%) !important;
+  border-color: #ff8a00 !important;
+  box-shadow: 0 0 12px #ff8a00, 0 0 32px rgba(255,111,0,.90), 0 0 70px rgba(138,43,4,.75) !important;
+}
+body.thanksgiving-edition > .personal-box-reveal,
+body.thanksgiving-edition.tv-fullscreen > .personal-box-reveal {
+  border-color: #ffd24c !important;
+  box-shadow: 0 0 12px #ffd24c, 0 0 34px rgba(255,189,35,.92), 0 0 75px rgba(188,79,5,.72) !important;
+}
+
+body.thanksgiving-edition.tv-fullscreen .halloween-scenery {
+  background-image: url("images/thanksgiving-top.webp") !important;
+}
+body.thanksgiving-edition.tv-fullscreen #briefcasesSection {
+  background-image:
+    linear-gradient(180deg, rgba(27,7,1,.25) 0%, rgba(32,9,1,.40) 55%, rgba(19,5,1,.55) 100%),
+    url("images/thanksgiving-top.webp") !important;
+}
+body.thanksgiving-edition.tv-fullscreen .bottom-scene {
+  background-image: url("images/thanksgiving-bottom.webp") !important;
+  filter: saturate(1.12) contrast(1.06) brightness(1.02);
+}
+body.thanksgiving-edition.tv-fullscreen .bottom-scene::before {
+  background: linear-gradient(to bottom, rgba(255,122,0,.32), transparent);
+}
+
+@media (max-width: 700px) {
+  body.thanksgiving-edition .halloween-scenery {
+    background-image: url("images/thanksgiving-top.webp");
+    background-position: center top;
+  }
+  body.thanksgiving-edition #briefcasesSection {
+    background-image:
+      linear-gradient(rgba(25,7,1,.42), rgba(18,5,1,.64)),
+      url("images/thanksgiving-top.webp");
+  }
+  body.thanksgiving-edition .bottom-scene {
+    background-image: url("images/thanksgiving-bottom.webp");
+    background-position: center bottom;
+  }
+}
